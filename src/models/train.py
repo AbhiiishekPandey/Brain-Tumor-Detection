@@ -10,7 +10,7 @@ print("CUDA Available:", torch.cuda.is_available())
 def main():
 
     # PATH 
-    data_dir = r"C:\Users\js731\Downloads\Brain-Tumor-Detection-XAI\data\balanced_dataset"
+    data_dir = r"C:\Users\js731\OneDrive\Desktop\Brain-Tumor-Detection-XAI\src\data\balanced_dataset"
 
     # TRANSFORM 
     transform = transforms.Compose([
@@ -61,10 +61,10 @@ def main():
 
         return 100 * correct / total
 
-    # ================= TRAINING =================
+    # TRAINING 
     epochs = 10  # increased
 
-    print("🚀 Training started...")
+    print(" Training started...")
 
     for epoch in range(epochs):
         model.train()
@@ -91,8 +91,8 @@ def main():
 
         print(f"Epoch [{epoch+1}/{epochs}] | Loss: {total_loss:.4f} | Val Acc: {val_acc:.2f}%")
 
-    print("✅ Training completed!")
+    print(" Training completed!")
 
-# ================= RUN =================
+# RUN 
 if __name__ == "__main__":
     main()

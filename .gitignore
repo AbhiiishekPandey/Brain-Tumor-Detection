@@ -1,0 +1,11 @@
+
+venv/
+.env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+src/data/balanced_dataset/
+src/data/brain_tumor_dataset_final/
+src/data/brain_tumor_dataset_resized/
+src/data/contrast_dataset/
