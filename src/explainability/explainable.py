@@ -3,6 +3,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 import cv2
+import timm
+import matplotlib
+matplotlib.use('Agg') # Set non-interactive backend for server-side generation
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import argparse
@@ -11,7 +14,6 @@ import random
 from pathlib import Path
 from PIL import Image
 from torchvision import transforms
-import timm
 
 # CONFIGURATION
 
@@ -184,8 +186,7 @@ def visualize_and_save(heatmap, original_image, confidence, pred_label,
     save_path = os.path.join(output_dir, f"{base_name}_comparison.png")
 
     plt.savefig(save_path, dpi=150, bbox_inches='tight')
-    plt.show()   
-
+    # plt.show() # REMOVED: Blocks server-side execution
     plt.close()
 
     return save_path

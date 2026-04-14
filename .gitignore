@@ -1,11 +1,36 @@
-
+# Virtual Environment
 venv/
 .env/
 .venv/
+env/
+
+# Python artifacts
 __pycache__/
 *.pyc
 *.pyo
-src/data/balanced_dataset/
-src/data/brain_tumor_dataset_final/
-src/data/brain_tumor_dataset_resized/
-src/data/contrast_dataset/
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Application generated files (Production hygiene)
+frontend/static/uploads/*
+!frontend/static/uploads/.gitkeep
+frontend/static/gradcam/*
+!frontend/static/gradcam/.gitkeep
+frontend/static/reports/*
+!frontend/static/reports/.gitkeep
+
+# Sensitive data
+.env
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large Datasets and local results
+src/data/
+results/
+artifacts/

@@ -1,4 +1,5 @@
 import torch
+import os
 import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms, models
@@ -9,8 +10,9 @@ print("CUDA Available:", torch.cuda.is_available())
 #  MAIN FUNCTION (IMPORTANT for Windows) 
 def main():
 
-    # PATH 
-    data_dir = r"C:\Users\js731\OneDrive\Desktop\Brain-Tumor-Detection-XAI\src\data\balanced_dataset"
+    # PATH (Relative for portability)
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    data_dir = os.path.join(base_dir, "src", "data", "balanced_dataset")
 
     # TRANSFORM 
     transform = transforms.Compose([

@@ -17,8 +17,9 @@ except:
 import timm
 import numpy as np
 
-# CONFIGURATION 
-DATA_DIR = r"C:\Users\js731\OneDrive\Desktop\Brain-Tumor-Detection-XAI\src\data\balanced_dataset"
+# CONFIGURATION (Relative paths for portability)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA_DIR = os.path.join(BASE_DIR, "src", "data", "balanced_dataset")
 TRAIN_DIR = os.path.join(DATA_DIR, "Training")
 VAL_DIR   = os.path.join(DATA_DIR, "Validation")
 TEST_DIR  = os.path.join(DATA_DIR, "Testing")
