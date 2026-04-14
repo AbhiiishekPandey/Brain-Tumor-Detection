@@ -1,13 +1,13 @@
-# Brain Tumor Detection with Explainable AI (XAI)
+# Brain Tumor Interpretability Framework
 
-A production-ready deep learning application for detecting brain tumors from MRI scans. The system utilizes an **EfficientNetV2-S** model and provides visual explanations using **Grad-CAM++**, followed by a professional diagnostic PDF report.
+An advanced diagnostic imaging system for detecting brain tumors from MRI scans. The system utilizes an **EfficientNetV2-S** model and provides visual interpretability using **Grad-CAM++**, followed by a comprehensive diagnostic PDF report.
 
 ![Dashboard Preview](static/ui_preview.png) *(Note: Add your UI preview here)*
 
 ## 🚀 Features
 - **High Accuracy Detection**: Leveraging state-of-the-art EfficientNetV2-S architecture.
-- **Explainable AI (XAI)**: Provides Grad-CAM++ heatmaps to show exactly where the model is looking.
-- **Professional Reporting**: Automated generation of diagnostic PDF reports for clinical support.
+- **Interpretability Framework**: Provides Grad-CAM++ heatmaps to highlight visual evidence in MRI scans.
+- **Professional Reporting**: Automated generation of comprehensive diagnostic PDF reports for clinical support.
 - **Production Hardened**: Secure file handling, robust error logging, and environment-based configuration.
 - **Web Interface**: Clean, dark-themed dashboard for intuitive MRI analysis.
 
@@ -47,20 +47,22 @@ A production-ready deep learning application for detecting brain tumors from MRI
 
 1. **Run the application:**
    ```bash
-   python frontend/app.py
+   python -m backend.app
    ```
 2. Open `http://127.0.0.1:5000` in your browser.
 3. Upload an MRI scan (supported: PNG, JPG, WEBP).
-4. View the AI prediction and the generated Grad-CAM heatmap.
+4. View the diagnostic prediction and the generated Grad-CAM heatmap.
 5. Click **Download Diagnostic Report** to export the findings.
 
 ## 📁 Project Structure
-- `src/`: Core logic and model utilities.
-  - `models/`: Training and inference engine.
-  - `explainability/`: Grad-CAM++ implementation.
-- `frontend/`: Flask application and UI templates.
-- `static/`: Assets, uploads (ignored by git), and generated reports.
-- `results/`: Evaluation metrics and training curves.
+- `backend/`: Core algorithms and web-server logic.
+  - `app.py`: Flask application server.
+  - `models/`: Training and model registry.
+  - `services/`: Inference and report generation engines.
+  - `utils/`: Grad-CAM++ interpretability utilities.
+- `frontend/`: UI implementation.
+  - `templates/`: HTML structures.
+  - `static/`: Assets, styling, JS, and managed storage.
 
 ## ⚖️ Disclaimer
 *This application is designed for educational and clinical support purposes only. It is not a replacement for professional medical diagnosis. All findings should be reviewed by a certified radiologist.*
